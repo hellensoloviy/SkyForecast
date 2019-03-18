@@ -53,13 +53,12 @@ class NetworkManager {
                 return
             }
             
-            //Try to encode data to models objects
             do {
                 let decoder = JSONDecoder()
                 let model = try decoder.decode(WeekWeatherMetadata.self, from: data)
                 completion(true, nil, model)
             } catch let error {
-                print("Data could not be parsed! :'(")
+                print("Data could not be parsed! :'( \(error.localizedDescription)")
                 completion(false, UserError.serverError, nil)
             }
         }
