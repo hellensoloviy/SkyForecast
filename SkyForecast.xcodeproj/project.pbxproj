@@ -21,6 +21,7 @@
 		9B312518223FA89A0086C8C0 /* WeekWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B312517223FA89A0086C8C0 /* WeekWeather.swift */; };
 		9B31251C223FA9DA0086C8C0 /* ReachabilityManager..swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31251B223FA9DA0086C8C0 /* ReachabilityManager..swift */; };
 		9B31251E223FB0950086C8C0 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31251D223FB0950086C8C0 /* NetworkConstants.swift */; };
+		9B312520223FBCF70086C8C0 /* LocationAuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B31251F223FBCF70086C8C0 /* LocationAuthorizationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9B312517223FA89A0086C8C0 /* WeekWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekWeather.swift; sourceTree = "<group>"; };
 		9B31251B223FA9DA0086C8C0 /* ReachabilityManager..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager..swift; sourceTree = "<group>"; };
 		9B31251D223FB0950086C8C0 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		9B31251F223FBCF70086C8C0 /* LocationAuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAuthorizationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				9B312509223FA2FC0086C8C0 /* DailyWeatherTableViewContoroller.swift */,
+				9B31251F223FBCF70086C8C0 /* LocationAuthorizationViewController.swift */,
 				9B31250B223FA31A0086C8C0 /* DailyWeatherTableViewCell.swift */,
 			);
 			path = Controllers;
@@ -229,6 +232,7 @@
 				9B312511223FA4600086C8C0 /* NetworkManager.swift in Sources */,
 				9B31250A223FA2FC0086C8C0 /* DailyWeatherTableViewContoroller.swift in Sources */,
 				9B3124F1223FA0120086C8C0 /* AppDelegate.swift in Sources */,
+				9B312520223FBCF70086C8C0 /* LocationAuthorizationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
