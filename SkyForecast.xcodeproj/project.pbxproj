@@ -22,6 +22,7 @@
 		9B312522223FC3C30086C8C0 /* LocationAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B312521223FC3C30086C8C0 /* LocationAccessManager.swift */; };
 		9B312524223FC4690086C8C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B312523223FC4690086C8C0 /* Constants.swift */; };
 		9B312526223FC5AF0086C8C0 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B312525223FC5AF0086C8C0 /* ReachabilityManager.swift */; };
+		9B5F24652240182A00A94EA9 /* ViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F24642240182A00A94EA9 /* ViewController+Alert.swift */; };
 		E1639D89AAC25EB7D2AA121B /* libPods-SkyForecast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C36310DE80FC89D0A1B8C15 /* libPods-SkyForecast.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		9B312521223FC3C30086C8C0 /* LocationAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAccessManager.swift; sourceTree = "<group>"; };
 		9B312523223FC4690086C8C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9B312525223FC5AF0086C8C0 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		9B5F24642240182A00A94EA9 /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
 		D5DC4C7353FBCD6D27E1F30A /* Pods-SkyForecast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyForecast.debug.xcconfig"; path = "Target Support Files/Pods-SkyForecast/Pods-SkyForecast.debug.xcconfig"; sourceTree = "<group>"; };
 		E47860B640FF143BF43EE745 /* Pods-SkyForecast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyForecast.release.xcconfig"; path = "Target Support Files/Pods-SkyForecast/Pods-SkyForecast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +154,7 @@
 		9B31250F223FA4540086C8C0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9B5F24642240182A00A94EA9 /* ViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				9B31251E223FB0950086C8C0 /* NetworkConstants.swift in Sources */,
 				9B312524223FC4690086C8C0 /* Constants.swift in Sources */,
 				9B31250C223FA31A0086C8C0 /* DailyWeatherTableViewCell.swift in Sources */,
+				9B5F24652240182A00A94EA9 /* ViewController+Alert.swift in Sources */,
 				9B312522223FC3C30086C8C0 /* LocationAccessManager.swift in Sources */,
 				9B312526223FC5AF0086C8C0 /* ReachabilityManager.swift in Sources */,
 				9B312518223FA89A0086C8C0 /* WeekWeather.swift in Sources */,

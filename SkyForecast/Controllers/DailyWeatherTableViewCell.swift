@@ -12,7 +12,6 @@ import UIKit
 class DailyWeatherTableViewCell: UITableViewCell {
     static let identifier = "DailyWeatherTableViewCell"
     
-//    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var summaryWeatherLabel: UILabel!
     

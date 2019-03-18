@@ -43,6 +43,7 @@ class DailyWeatherTableViewController: UITableViewController {
             }
         }
         
+        self.tableView.tableFooterView = UIView.init()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +60,11 @@ class DailyWeatherTableViewController: UITableViewController {
             print("Result! - \(isSuccess)")
             if (isSuccess) {
                 self.weather = object
+            } else if let error = error {
+                self.showError(error.descriptor)
+                self.weather = nil
+            } else {
+                self.weather = nil
             }
         }
         

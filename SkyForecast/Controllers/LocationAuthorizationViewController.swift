@@ -34,28 +34,8 @@ class LocationAuthorizationViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             } else if granted {
                 print("Location__ authorization problem!")
-//                self.showDeniedAlert()
             }
         }
-    }
-    
-    private func showDeniedAlert() {
-        
-//        let accessDenied = "Access denied"
-//
-//
-//        let alert = UIAlertController(title: accessDenied, message: Constants.Presentation.Alert.Message.youCanGoSettings, preferredStyle: .alert)
-//        let settings = UIAlertAction(title: Constants.Presentation.Alert.Button.settings, style: .default, handler: { (action) in
-//            let settingsUrl = URL(string: UIApplication.openSettingsURLString)
-//            if let url = settingsUrl, UIApplication.shared.canOpenURL(url) {
-//                UIApplication.shared.open(url, completionHandler: nil)
-//            }
-//        })
-//
-//        alert.addAction(UIAlertAction(title: Constants.Presentation.Alert.Button.close, style: .cancel, handler: nil))
-//        alert.addAction(settings)
-//        alert.preferredAction = settings
-//        present(alert, animated: true, completion: nil)
     }
     
 }
