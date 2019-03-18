@@ -53,7 +53,7 @@ class NetworkManager {
                 return
             }
             
-            guard let data = data else {
+            guard let dataToDecode = data else {
                 print("Nil data received from request \(url)")
                 completion(false, UserError.serverError, nil)
                 return
@@ -61,7 +61,7 @@ class NetworkManager {
             
             do {
                 let decoder = JSONDecoder()
-                let model = try decoder.decode(WeekWeatherMetadata.self, from: data)
+                let model = try decoder.decode(WeekWeatherMetadata.self, from: dataToDecode)
                 completion(true, nil, model)
             } catch let error {
                 print("Data could not be parsed! :'( \(error.localizedDescription)")

@@ -15,7 +15,7 @@ class LocationAccessManager {
     
     //MARK: -
 
-    var isAnonimysUser: Bool = true
+    var isAnonimysUser: Bool = false
     let defaultLat = 37.8267
     let defaultLon = -122.4233
     

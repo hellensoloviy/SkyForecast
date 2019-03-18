@@ -16,10 +16,12 @@ class LocationAuthorizationViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func authorizationTapped(_ sender: UIButton) {
+        LocationAccessManager.shared.isAnonimysUser = false
         makePermissionRequest()
     }
     
     @IBAction func nonAuthorizedUse(_ sender: UIButton) {
+        LocationAccessManager.shared.isAnonimysUser = true
         self.dismiss(animated: true, completion: nil)
     }
     

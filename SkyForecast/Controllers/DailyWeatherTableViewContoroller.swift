@@ -18,6 +18,7 @@ class DailyWeatherTableViewController: UITableViewController {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.title = self.weather?.timezone ?? ""
             }
         }
     }
@@ -36,6 +37,16 @@ class DailyWeatherTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if !LocationAccessManager.shared.isLocationAccessGranted(), !LocationAccessManager.shared.isAnonimysUser {
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: Constants.Segue.presentAuthorization, sender: nil)
+            }
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         var lat = LocationAccessManager.shared.defaultLat
         var lon = LocationAccessManager.shared.defaultLon
         
@@ -45,17 +56,11 @@ class DailyWeatherTableViewController: UITableViewController {
         }
         
         NetworkManager().dailyWeather(for: lat, lon: lon) { (isSuccess, error, object) in
-            print("Result!")
+            print("Result! - \(isSuccess)")
             if (isSuccess) {
                 self.weather = object
             }
         }
-        
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
     }
     
