@@ -15,5 +15,6 @@ struct Constants {
     
     struct Segue {
         static let presentAuthorization = "presentAuthorization"
+        static let showDetailedWeather = "showDetailedWeather"
     }
 }

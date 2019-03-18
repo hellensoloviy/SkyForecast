@@ -69,7 +69,7 @@ class DailyWeatherTableViewController: UITableViewController {
         }
         
     }
-    
+
     //MARK: - Table View Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -81,6 +81,16 @@ class DailyWeatherTableViewController: UITableViewController {
         let object = data[indexPath.row]
         cell.setup(with: object)
         return cell
+    }
+    
+    
+    //MARK: -
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segue.showDetailedWeather, let vc = segue.destination as? DetailedWeatherTableViewController {
+            if let path = tableView.indexPathForSelectedRow {
+                vc.object = data[path.row]
+            }
+        }
     }
     
 }

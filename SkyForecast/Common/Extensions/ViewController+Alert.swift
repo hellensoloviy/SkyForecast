@@ -10,12 +10,9 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-
     func showError(_ message: String) {
         let alert = UIAlertController(title: "Error occured", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        alert.addAction(settings)
-        alert.preferredAction = settings
         present(alert, animated: true, completion: nil)
     }
     

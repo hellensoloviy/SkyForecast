@@ -23,7 +23,6 @@ class DailyWeatherTableViewCell: UITableViewCell {
         let formattedDate = dateFormatterPrint.string(from: date)
         dateLabel.text = formattedDate
 
-        
         summaryWeatherLabel.text = object.summary
     }
 }
