@@ -23,9 +23,15 @@ class NetworkManager {
     //MARK: - Properties
     
     func dailyWeather(for lat: Double, lon: Double, completion: @escaping ResponseCompletion){
+        guard ReachabilityManager.shared.isReachable else {
+            completion(false, UserError.noInternet, nil)
+            return
+        }
+        
         let baseUrlString = NetworkConfig.baseURL + NetworkConfig.apiKey + "/\(lat),\(lon)"
         let dailyForecastURL = baseUrlString + "?exclude=hourly,minutely,currently,flags"
-
+        
+        
         guard let url = URL(string: dailyForecastURL) else {
             completion(false, UserError.custom("URL is notVlaid"), nil)
             return

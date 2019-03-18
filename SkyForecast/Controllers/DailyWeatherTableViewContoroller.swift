@@ -8,26 +8,50 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class DailyWeatherTableViewController: UITableViewController {
     static let identifier = "DailyWeatherTableViewController"
     
     //MARK: -
-    var weather: WeekWeatherMetadata?
+    var weather: WeekWeatherMetadata?{
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     var data: [DailyWeather] {
-        return  [] //weather?.week.data ??
+        return  weather?.daily.data ?? []
     }
+    
+    lazy var locationManager: CLLocationManager = {
+        let manager = CLLocationManager()
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        return manager
+    }()
     
     //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
-            let lat = 37.8267
-            let lon = -122.4233
+        
+        var lat = LocationAccessManager.shared.defaultLat
+        var lon = LocationAccessManager.shared.defaultLon
+        
+        if !LocationAccessManager.shared.isAnonimysUser, let location = locationManager.location {
+            lat = location.coordinate.latitude
+            lon = location.coordinate.longitude
+        }
         
         NetworkManager().dailyWeather(for: lat, lon: lon) { (isSuccess, error, object) in
             print("Result!")
+            if (isSuccess) {
+                self.weather = object
+            }
         }
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,10 +66,9 @@ class DailyWeatherTableViewController: UITableViewController {
     
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DailyWeatherTableViewCell.identifier, for: indexPath) as! DailyWeatherTableViewCell
-//        let object = country(for: indexPath.row)
     
-//        cell.textLabel!.text = object.nativeName
-//        cell.detailTextLabel!.text = object.region
+        let object = data[indexPath.row]
+        cell.setup(with: object)
         return cell
     }
     

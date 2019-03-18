@@ -13,7 +13,7 @@ class DailyWeather: Codable {
     var icon: String
     var precipType: String
     
-    var time: CLong
+    var time: TimeInterval
     
     var apparentTemperatureHigh: Double
     var apparentTemperatureHighTime: Double
