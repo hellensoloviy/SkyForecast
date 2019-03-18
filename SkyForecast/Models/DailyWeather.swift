@@ -11,7 +11,6 @@ import Foundation
 class DailyWeather: Codable {
     var summary: String
     var icon: String
-    var precipType: String
     
     var time: TimeInterval
     
