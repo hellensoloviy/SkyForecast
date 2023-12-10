@@ -24,4 +24,11 @@ class DailyWeather: Codable {
     var windspeed: Double
     var visibility: Double
     
+    var humidity: Double
+    var pressure: Double
+    
+    var temp: Double // станом на зараз
+    var feelslike: Double // станом на зараз
+
+    
 }
