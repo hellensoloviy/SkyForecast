@@ -82,7 +82,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="3Ve-18-e3J"/>
                     <connections>
-                        <segue destination="D6G-3M-8MT" kind="showDetail" identifier="presentAuthorization" id="RsA-bZ-ham"/>
+                        <segue destination="D6G-3M-8MT" kind="show" identifier="presentAuthorization" id="RsA-bZ-ham"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plm-Ns-zrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,7 +92,9 @@
         <!--NotAuthorizedFlow-->
         <scene sceneID="zkp-lc-2YD">
             <objects>
-                <viewControllerPlaceholder storyboardName="NotAuthorizedFlow" id="D6G-3M-8MT" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="NotAuthorizedFlow" id="D6G-3M-8MT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZBb-WG-vI2"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hg-i6-bG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="376" y="-37"/>

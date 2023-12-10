@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class DetailedWeatherTableViewController: UITableViewController {
-    static let identifier = "DetailedWeatherTableViewController"
+    static let identifier = "DetailedWeatheTableViewController"
 
     //MARK: -
     @IBOutlet weak var highestTempratureLabel: UILabel!

@@ -24,7 +24,7 @@ class LocationAuthorizationViewController: UIViewController {
     
     @IBAction func nonAuthorizedUse(_ sender: UIButton) {
         LocationAccessManager.shared.isAnonimysUser = true
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //MARK: - Private
@@ -34,18 +34,15 @@ class LocationAuthorizationViewController: UIViewController {
         Permission<Location>.prepare(for: self, with: config) { (granted) in
             if granted && (CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways)  {
                 print("All is good. Location access granted.")
-                self.dismiss(animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
             } else if granted {
                 print("Location__ authorization problem!")
             }
         }
     }
 
-    
-    @objc func locationManager(_ manager: CLLocationManager,didFailWithError error: Error
-    ) {
-        // Handle failure to get a user’s location
-    }
     
 }
 
