@@ -14,7 +14,7 @@ class DailyWeather: Codable {
     var conditions: String
     var icon: String
     
-    var datetimeEpoch: TimeInterval
+    var datetimeEpoc: TimeInterval
     
     var tempmax: Double
     var feelslikemax: Double

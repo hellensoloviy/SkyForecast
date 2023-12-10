@@ -11,6 +11,7 @@ import UIKit
 import PermissionsService
 import CoreLocation
 
+
 class LocationAuthorizationViewController: UIViewController {
     let identifier = "LocationAuthorizationViewController"
     
@@ -46,6 +47,10 @@ class LocationAuthorizationViewController: UIViewController {
     
 }
 
-extension LocationAuthorizationViewController: CLLocationManagerDelegate, Permissible {
+extension LocationAuthorizationViewController: CLLocationManagerDelegate {
+    //nothing at the moment 
+}
+
+extension LocationAuthorizationViewController: Permissible {
     //no op needed
 }
