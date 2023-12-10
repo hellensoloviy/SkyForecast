@@ -11,8 +11,8 @@ import UIKit
 
 //MARK: - Config
 fileprivate class NetworkConfig {
-    static let baseURL = "https://api.darksky.net/forecast/"
-    static let apiKey = "aaef37d49b18f8926db06643a78bdd4d"
+    static let baseURL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"
+    static let apiKey = "?unitGroup=metric&key=3YL7EZFDPM4YQ7CVSMGCMS77Z&contentType=json"
     
     static var fullBaseURL: String {
         return baseURL + apiKey + "/"
@@ -27,9 +27,10 @@ class NetworkManager {
             completion(false, UserError.noInternet, nil)
             return
         }
+
         
-        let baseUrlString = NetworkConfig.baseURL + NetworkConfig.apiKey + "/\(lat),\(lon)"
-        let dailyForecastURL = baseUrlString + "?exclude=hourly,minutely,currently,flags"
+        let baseUrlString = NetworkConfig.baseURL + "\(lat),\(lon)" + NetworkConfig.apiKey
+        let dailyForecastURL = baseUrlString
         
         
         guard let url = URL(string: dailyForecastURL) else {
@@ -60,14 +61,22 @@ class NetworkManager {
             }
             
             do {
+                
+//                if let json = try JSONSerialization.jsonObject(with: dataToDecode, options: []) as? [String: Any] {
+//                    // try to read out a string array
+//                    
+//                }
+                
                 let decoder = JSONDecoder()
                 let model = try decoder.decode(WeekWeatherMetadata.self, from: dataToDecode)
                 completion(true, nil, model)
+                
             } catch let error {
-                print("Data could not be parsed! :'( \(error.localizedDescription)")
+                print("Data could not be parsed! :'( \(error)")
                 completion(false, UserError.serverError, nil)
             }
         }
+
         
         task.resume()
     }

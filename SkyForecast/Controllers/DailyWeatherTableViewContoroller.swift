@@ -24,7 +24,7 @@ class DailyWeatherTableViewController: UITableViewController {
     }
     
     var data: [DailyWeather] {
-        return  weather?.daily.data ?? []
+        return  weather?.days ?? []
     }
     
     lazy var locationManager: CLLocationManager = {
@@ -48,10 +48,12 @@ class DailyWeatherTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         var lat = LocationAccessManager.shared.defaultLat
         var lon = LocationAccessManager.shared.defaultLon
         
-       if !LocationAccessManager.shared.isLocationAccessGranted(), !LocationAccessManager.shared.isAnonimysUser {
+       if !LocationAccessManager.shared.isLocationAccessGranted(), 
+            !LocationAccessManager.shared.isAnonimysUser {
             return
         }
         
@@ -65,10 +67,15 @@ class DailyWeatherTableViewController: UITableViewController {
             if (isSuccess) {
                 self.weather = object
             } else if let error = error {
-                self.showError(error.descriptor)
-                self.weather = nil
+                DispatchQueue.main.sync {
+                    self.weather = nil
+                    self.showError(error.descriptor)
+                }
             } else {
-                self.weather = nil
+                DispatchQueue.main.sync {
+                    self.weather = nil
+                }
+
             }
         }
     }
