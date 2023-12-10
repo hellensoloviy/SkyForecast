@@ -11,8 +11,11 @@ import Foundation
 class WeekWeatherMetadata: Codable {
     var latitude: Double
     var longitude: Double
+<<<<<<< HEAD
     var timezone: String
     var description: String
+=======
+>>>>>>> updates-latest-p1
     
     var days: [DailyWeather]
 }

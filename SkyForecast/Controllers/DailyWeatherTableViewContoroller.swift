@@ -36,6 +36,18 @@ class DailyWeatherTableViewController: UITableViewController {
     //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.tableFooterView = UIView.init()
+        
+        if !LocationAccessManager.shared.isLocationAccessGranted(), !LocationAccessManager.shared.isAnonimysUser {
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: Constants.Segue.presentAuthorization, sender: nil)
+            }
+            return
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         if !LocationAccessManager.shared.isLocationAccessGranted(), !LocationAccessManager.shared.isAnonimysUser {
             DispatchQueue.main.async {
@@ -43,7 +55,6 @@ class DailyWeatherTableViewController: UITableViewController {
             }
         }
         
-        self.tableView.tableFooterView = UIView.init()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,6 +89,11 @@ class DailyWeatherTableViewController: UITableViewController {
 
             }
         }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
     }
 

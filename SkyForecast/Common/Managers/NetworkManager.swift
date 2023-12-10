@@ -8,9 +8,15 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 //MARK: - Config
+
 fileprivate class NetworkConfig {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> updates-latest-p1
     static let baseURL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"
     static let apiKey = "?unitGroup=metric&key=3YL7EZFDPM4YQ7CVSMGCMS77Z&contentType=json"
     
@@ -20,6 +26,7 @@ fileprivate class NetworkConfig {
 }
 
 class NetworkManager {
+    
     //MARK: - Properties
     
     func dailyWeather(for lat: Double, lon: Double, completion: @escaping ResponseCompletion){
@@ -41,9 +48,6 @@ class NetworkManager {
         var request = URLRequest(url: url)
         
         request.httpMethod = RequestType.get
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
         request.cachePolicy = .returnCacheDataElseLoad
 
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in

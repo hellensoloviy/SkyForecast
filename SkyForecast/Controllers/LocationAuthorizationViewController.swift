@@ -11,6 +11,7 @@ import UIKit
 import PermissionsService
 import CoreLocation
 
+
 class LocationAuthorizationViewController: UIViewController {
     let identifier = "LocationAuthorizationViewController"
     
@@ -44,6 +45,7 @@ class LocationAuthorizationViewController: UIViewController {
         }
     }
 
+<<<<<<< HEAD
     
     @objc func locationManager(_ manager: CLLocationManager,didFailWithError error: Error
     ) {
@@ -53,5 +55,15 @@ class LocationAuthorizationViewController: UIViewController {
 }
 
 extension LocationAuthorizationViewController: CLLocationManagerDelegate, Permissible {
+=======
+    
+}
+
+extension LocationAuthorizationViewController: CLLocationManagerDelegate {
+    //nothing at the moment 
+}
+
+extension LocationAuthorizationViewController: Permissible {
+>>>>>>> updates-latest-p1
     //no op needed
 }

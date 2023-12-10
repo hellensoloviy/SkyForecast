@@ -22,6 +22,12 @@ class DetailedWeatherTableViewController: UITableViewController {
     var object: DailyWeather!
     
     //MARK: -
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.tableFooterView = UIView.init()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
