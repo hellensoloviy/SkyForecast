@@ -9,18 +9,20 @@
 import Foundation
 
 class DailyWeather: Codable {
-    var summary: String
+    
+    var description: String
+    var conditions: String
     var icon: String
     var precipType: String
     
-    var time: TimeInterval
+    var datetimeEpoch: TimeInterval
     
-    var apparentTemperatureHigh: Double
-    var apparentTemperatureHighTime: Double
-    var apparentTemperatureLow: Double
-    var apparentTemperatureLowTime: Double
+    var tempmax: Double
+    var feelslikemax: Double
+    var tempmin: Double
+    var feelslikemin: Double
     
-    var windSpeed: Double
+    var windspeed: Double
     var visibility: Double
     
 }

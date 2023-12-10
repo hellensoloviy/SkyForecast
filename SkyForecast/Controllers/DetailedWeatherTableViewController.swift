@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class DetailedWeatherTableViewController: UITableViewController {
-    static let identifier = "DetailedWeatherTableViewController"
+    static let identifier = "DetailedWeatheTableViewController"
 
     //MARK: -
     @IBOutlet weak var highestTempratureLabel: UILabel!
@@ -31,10 +31,10 @@ class DetailedWeatherTableViewController: UITableViewController {
     
     //MARK: - Private
     private func setupWithObject() {
-        highestTempratureLabel.text = "The highest temprature is \(object.apparentTemperatureHigh)"
-        lowestTempratureLabel.text = "The lowest temprature is \(object.apparentTemperatureLow)"
+        highestTempratureLabel.text = "The highest temprature is \(object.tempmax)"
+        lowestTempratureLabel.text = "The lowest temprature is \(object.tempmin)"
         
-        windSpeedLabel.text = "Wind speed is aroud \(object.windSpeed)"
+        windSpeedLabel.text = "Wind speed is aroud \(object.windspeed)"
         visibilityLabel.text = "Visibility \(object.visibility)"
 
         self.title = "Forecast"

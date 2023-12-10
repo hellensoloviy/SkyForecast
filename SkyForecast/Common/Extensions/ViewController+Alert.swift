@@ -12,8 +12,13 @@ import UIKit
 extension UIViewController {
     func showError(_ message: String) {
         let alert = UIAlertController(title: "Error occured", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel) { _ in
+            fatalError()
+        })
+        
+        DispatchQueue.main.sync {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
 }

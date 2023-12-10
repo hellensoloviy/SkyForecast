@@ -12,13 +12,8 @@ class WeekWeatherMetadata: Codable {
     var latitude: Double
     var longitude: Double
     var timezone: String
+    var description: String
     
-    var daily: WeekWeather
+    var days: [DailyWeather]
 }
 
-class WeekWeather: Codable {
-    var summary: String
-    var icon: String
-    
-    var data: [DailyWeather]
-}

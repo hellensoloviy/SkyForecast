@@ -17,12 +17,12 @@ class DailyWeatherTableViewCell: UITableViewCell {
     
     
     func setup(with object: DailyWeather) {
-        let date = Date(timeIntervalSince1970: object.time)
+        let date = Date(timeIntervalSince1970: object.datetimeEpoch)
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "MMM dd,yyyy"
         let formattedDate = dateFormatterPrint.string(from: date)
         dateLabel.text = formattedDate
 
-        summaryWeatherLabel.text = object.summary
+        summaryWeatherLabel.text = object.description
     }
 }

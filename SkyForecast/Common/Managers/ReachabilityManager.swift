@@ -27,6 +27,7 @@ import Reachability
     
     @objc func startTracking(){
         reachability = Reachability()
+        
         do { try reachability?.startNotifier() } catch {
             print("Unable to start notifier")
         }
@@ -44,7 +45,7 @@ import Reachability
             isReachable = true
         } else {
             isReachable = false
-            print("Network not reachable")
+            fatalError()
         }
     }
     
@@ -53,8 +54,5 @@ import Reachability
         updateStatus(reachability: reachability)
         
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
+
 }
