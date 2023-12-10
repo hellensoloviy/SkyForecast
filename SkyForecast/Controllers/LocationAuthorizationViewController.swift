@@ -14,6 +14,8 @@ import CoreLocation
 class LocationAuthorizationViewController: UIViewController {
     let identifier = "LocationAuthorizationViewController"
     
+    static let locationManager = CLLocationManager()
+
     //MARK: - Actions
     @IBAction func authorizationTapped(_ sender: UIButton) {
         LocationAccessManager.shared.isAnonimysUser = false
@@ -27,6 +29,7 @@ class LocationAuthorizationViewController: UIViewController {
     
     //MARK: - Private
     private func makePermissionRequest() {
+        
         let config = LocationConfiguration(.whenInUse)
         Permission<Location>.prepare(for: self, with: config) { (granted) in
             if granted && (CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways)  {
@@ -37,9 +40,15 @@ class LocationAuthorizationViewController: UIViewController {
             }
         }
     }
+
+    
+    @objc func locationManager(_ manager: CLLocationManager,didFailWithError error: Error
+    ) {
+        // Handle failure to get a user’s location
+    }
     
 }
 
-extension LocationAuthorizationViewController: Permissible {
+extension LocationAuthorizationViewController: CLLocationManagerDelegate, Permissible {
     //no op needed
 }

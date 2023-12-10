@@ -1,54 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "7F8B416B-E8D0-4927-BA0B-8B25A744004B"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "72636ABE-D344-4524-8601-595FA7A99FFF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SkyForecast/Common/Managers/NetworkManager.swift"
-            timestampString = "574627901.905471"
+            filePath = "SkyForecast/Controllers/LocationAuthorizationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "dailyWeather(for:lon:completion:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "makePermissionRequest()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "72636ABE-D344-4524-8601-595FA7A99FFF - 742141afb15e5d33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in SkyForecast.LocationAuthorizationViewController.makePermissionRequest() -&gt; ()"
+                  moduleName = "SkyForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hellensoloviy/Developer/swift/SkyForecast/SkyForecast/Controllers/LocationAuthorizationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "526">
+               </Location>
+               <Location
+                  uuid = "72636ABE-D344-4524-8601-595FA7A99FFF - d3d8a5fead16825a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkyForecast.LocationAuthorizationViewController.makePermissionRequest() -&gt; ()"
+                  moduleName = "SkyForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hellensoloviy/Developer/swift/SkyForecast/SkyForecast/Controllers/LocationAuthorizationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "121">
+               </Location>
+               <Location
+                  uuid = "72636ABE-D344-4524-8601-595FA7A99FFF - 742141afb15e5dfd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in SkyForecast.LocationAuthorizationViewController.makePermissionRequest() -&gt; ()"
+                  moduleName = "SkyForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hellensoloviy/Developer/swift/SkyForecast/SkyForecast/Controllers/LocationAuthorizationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "326">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "BF23463A-F5D2-43B0-BAF3-5B990482A255"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SkyForecast/Common/Managers/NetworkManager.swift"
-            timestampString = "574627901.905542"
+            filePath = "SkyForecast/Controllers/LocationAuthorizationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "dailyWeather(for:lon:completion:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "makePermissionRequest()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BF23463A-F5D2-43B0-BAF3-5B990482A255 - d3d8a5fead16825a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkyForecast.LocationAuthorizationViewController.makePermissionRequest() -&gt; ()"
+                  moduleName = "SkyForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hellensoloviy/Developer/swift/SkyForecast/SkyForecast/Controllers/LocationAuthorizationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "121">
+               </Location>
+               <Location
+                  uuid = "BF23463A-F5D2-43B0-BAF3-5B990482A255 - 742141afb15e5d12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in SkyForecast.LocationAuthorizationViewController.makePermissionRequest() -&gt; ()"
+                  moduleName = "SkyForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hellensoloviy/Developer/swift/SkyForecast/SkyForecast/Controllers/LocationAuthorizationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "561">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "F0CF4987-740B-4970-8C2E-D6A0BA1F8419"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SkyForecast/Common/Managers/NetworkManager.swift"
-            timestampString = "574627901.905591"
+            filePath = "SkyForecast/Controllers/DailyWeatherTableViewContoroller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "dailyWeather(for:lon:completion:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F0CF4987-740B-4970-8C2E-D6A0BA1F8419 - d64e0cd9f08fd435"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;SkyForecast.UserError&gt;, Swift.Optional&lt;SkyForecast.WeekWeatherMetadata&gt;) -&gt; () in SkyForecast.DailyWeatherTableViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "SkyForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hellensoloviy/Developer/swift/SkyForecast/SkyForecast/Controllers/DailyWeatherTableViewContoroller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "620">
+               </Location>
+               <Location
+                  uuid = "F0CF4987-740B-4970-8C2E-D6A0BA1F8419 - d64e0cd9f08fd435"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;SkyForecast.UserError&gt;, Swift.Optional&lt;SkyForecast.WeekWeatherMetadata&gt;) -&gt; () in SkyForecast.DailyWeatherTableViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "SkyForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hellensoloviy/Developer/swift/SkyForecast/SkyForecast/Controllers/DailyWeatherTableViewContoroller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "591">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42D0BA96-630F-4BA5-AA3F-BA1AA687D252"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyForecast/Controllers/DailyWeatherTableViewContoroller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "42D0BA96-630F-4BA5-AA3F-BA1AA687D252 - d64e0cd9f08fd5da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;SkyForecast.UserError&gt;, Swift.Optional&lt;SkyForecast.WeekWeatherMetadata&gt;) -&gt; () in SkyForecast.DailyWeatherTableViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "SkyForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hellensoloviy/Developer/swift/SkyForecast/SkyForecast/Controllers/DailyWeatherTableViewContoroller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "715">
+               </Location>
+               <Location
+                  uuid = "42D0BA96-630F-4BA5-AA3F-BA1AA687D252 - d64e0cd9f08fd5da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;SkyForecast.UserError&gt;, Swift.Optional&lt;SkyForecast.WeekWeatherMetadata&gt;) -&gt; () in SkyForecast.DailyWeatherTableViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "SkyForecast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hellensoloviy/Developer/swift/SkyForecast/SkyForecast/Controllers/DailyWeatherTableViewContoroller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "694">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

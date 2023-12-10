@@ -37,10 +37,10 @@ class DetailedWeatherTableViewController: UITableViewController {
     
     //MARK: - Private
     private func setupWithObject() {
-        highestTempratureLabel.text = "The highest temprature is \(object.apparentTemperatureHigh)"
-        lowestTempratureLabel.text = "The lowest temprature is \(object.apparentTemperatureLow)"
+        highestTempratureLabel.text = "The highest temprature is \(object.tempmax)"
+        lowestTempratureLabel.text = "The lowest temprature is \(object.tempmin)"
         
-        windSpeedLabel.text = "Wind speed is aroud \(object.windSpeed)"
+        windSpeedLabel.text = "Wind speed is aroud \(object.windspeed)"
         visibilityLabel.text = "Visibility \(object.visibility)"
 
         self.title = "Forecast"
